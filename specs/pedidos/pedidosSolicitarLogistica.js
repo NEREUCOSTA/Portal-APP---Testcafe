@@ -7,6 +7,7 @@ fixture('Testes Pedidos').page(
 );
 
 test('Solicitar logística', async (t) => {
+	await t.resizeWindow(1920, 1080);
 	// Realiza o login
 	await LoginPage.login();
 

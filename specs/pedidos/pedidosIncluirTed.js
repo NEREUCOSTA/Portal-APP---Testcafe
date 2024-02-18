@@ -7,6 +7,7 @@ fixture('Testes Pedidos').page(
 );
 
 test('Inclusão de TED', async (t) => {
+	await t.resizeWindow(1920, 1080);
 	// Realiza o login
 	await LoginPage.login();
 
