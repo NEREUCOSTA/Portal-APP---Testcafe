@@ -20,14 +20,14 @@ test('Solicitar logística', async (t) => {
 	const statusInput = 'Confirmado pela operadora/Conc';
 	const grupoEconomicoInput =
 		'Prelease-Associacao Educacional Pentagono / 49.205.616/0001-98'; // A inicial dos nomes deve ser maiúscula
-	const operadora =
-		' AESA - ELETRÔNICO - Responsável VT: Fernando Henrique Dias';
 
 	await PedidosPage.selecionaGrupoEconomico(grupoEconomicoInput);
 	await PedidosPage.selecionarStatus(statusInput);
 	await PedidosPage.filtrarPedidos();
 
 	// ============== Navega até a tela do pedido ================
+	const operadora =
+		' AESA - ELETRÔNICO - Responsável VT: Fernando Henrique Dias';
 
 	await PedidosPage.selecionarOperadora(operadora);
 	await PedidosPage.clicaBotaoVerItens();
