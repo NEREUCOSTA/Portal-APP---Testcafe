@@ -1,13 +1,14 @@
 import { Selector, t } from 'testcafe';
+import { PASSWORD, USERNAME } from '../../env_variables';
 export class LoginPage {
 	static async preencherEmail() {
 		const email = Selector('input[type="email"].form-control');
-		await t.typeText(email, 'renata.abreu@dmsistemas.com.br');
+		await t.typeText(email, USERNAME);
 	}
 
 	static async preencherSenha() {
 		const senha = Selector('input[type="password"].form-control');
-		await t.typeText(senha, 'dev@0033');
+		await t.typeText(senha, PASSWORD);
 	}
 
 	static async clicarBotaoEntrar() {
@@ -16,7 +17,7 @@ export class LoginPage {
 
 	static async validarHomePage() {
 		const nomeUsuário = Selector('.pro-user-name');
-		await t.expect(nomeUsuário.textContent).contains(' Renata Silva ');
+		await t.expect(nomeUsuário.textContent).contains(' Nereu Nogueira ');
 	}
 
 	static async login() {
@@ -25,5 +26,3 @@ export class LoginPage {
 		await LoginPage.clicarBotaoEntrar();
 	}
 }
-
-// export default LoginPage;

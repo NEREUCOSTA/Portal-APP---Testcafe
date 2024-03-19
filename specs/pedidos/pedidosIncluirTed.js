@@ -2,9 +2,7 @@ import { PedidosPage } from '../../pages/Pedidos/pedidosPage';
 import { LoginPage } from '../../pages/login/loginPage';
 import { DetalhesDoPedidoPage } from '../../pages/pedidos/detalhesDoPedidoPage';
 
-fixture('Testes Pedidos').page(
-	'https://app-portalautomatizadosec4-prd.azurewebsites.net/'
-);
+fixture('Testes Pedidos').page('https://app.audaztec.com.br/');
 
 test('Inclusão de TED', async (t) => {
 	await t.resizeWindow(1920, 1080);
@@ -13,7 +11,7 @@ test('Inclusão de TED', async (t) => {
 
 	// Acessa a página de pedidos
 	await t.navigateTo(
-		'https://app-portalautomatizadosec4-prd.azurewebsites.net/recharge-order-list-operator'
+		'https://app.audaztec.com.br/recharge-order-list-operator'
 	);
 
 	// ============== Realiza o filtro de pedidos ================
